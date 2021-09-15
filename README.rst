@@ -1,8 +1,7 @@
 Timeout decorator
 =================
 
-forked version for dev in win systems 
-optional you can disable timeout in win systems
+forked version for dev in win systems. Optional you can disable timeout by passing bool to enabled arg
 
 |Build Status| |Pypi Status| |Coveralls Status|
 
