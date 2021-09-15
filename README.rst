@@ -1,6 +1,9 @@
 Timeout decorator
 =================
 
+forked version for dev in win systems 
+optional you can disable timeout in win systems
+
 |Build Status| |Pypi Status| |Coveralls Status|
 
 Installation
