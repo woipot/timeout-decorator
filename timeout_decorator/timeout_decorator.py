@@ -47,7 +47,7 @@ def _raise_exception(exception, exception_message):
         raise exception(exception_message)
 
 
-def timeout(seconds=None, use_signals=True, timeout_exception=TimeoutError, exception_message=None):
+def timeout(seconds=None, use_signals=True, timeout_exception=TimeoutError, exception_message=None, enabled=True):
     """Add a timeout parameter to a function and return it.
 
     :param seconds: optional time limit in seconds or fractions of a second. If None is passed, no timeout is applied.
@@ -63,6 +63,8 @@ def timeout(seconds=None, use_signals=True, timeout_exception=TimeoutError, exce
     parameter. The function is wrapped and returned to the caller.
     """
     def decorate(function):
+        if not enabled:
+            return function
 
         if use_signals:
             def handler(signum, frame):
